@@ -116,3 +116,7 @@ Route::middleware('auth')->group(function () {
     Route::middleware('role:admin')->group(function () {
         Route::get('/reports', [ReportController::class, 'index'])->name('reports.index');
     });
+
+});
+
+require __DIR__.'/auth.php';
